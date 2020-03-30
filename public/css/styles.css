@@ -1,0 +1,29 @@
+
+
+img{
+    width: 250px
+}
+
+body{
+    background-color: darksalmon;
+    color: red;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+input{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+button{
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: dodgerblue;
+}

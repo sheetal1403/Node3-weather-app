@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+
+<body>
+    {{>header}}
+    <h3>Use this site to get weather details</h3>
+    {{!-- <img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg"> --}}
+
+    <form>
+        <input type="text" id="location" placeholder="Enter location" name="location">
+        <button type="submit">Search</button>
+    </form>
+
+    <p id="msg-1"></p>
+    <p id="msg-2"></p>
+
+    {{>footer}}
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>
+

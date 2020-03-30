@@ -1,0 +1,18 @@
+const request = require('request')
+
+getweather = (latitude,longitude,callback) => {
+    const url = 'https://api.darksky.net/forecast/1ae7e4590e02c087c78e8aa161d21a5a/'+latitude+','+longitude;
+    request({url: url, json:true}, (error,{body}) => {
+        if(error){
+            callback('Error connecting');
+        }else if(body.error){
+            callback('Poorly formatted request')
+        }else{
+            const temp = body.currently.temperature;
+            // const precip = response.body.currently.precipProbability; 
+            callback(undefined, temp)
+        }
+    })
+}
+
+module.exports = getweather
