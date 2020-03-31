@@ -8,9 +8,14 @@ getweather = (latitude,longitude,callback) => {
         }else if(body.error){
             callback('Poorly formatted request')
         }else{
-            const temp = body.currently.temperature;
+            const temperature = body.currently.temperature;
             // const precip = response.body.currently.precipProbability; 
-            callback(undefined, temp)
+    
+            const summary =  body.daily.data[0].summary
+            callback(undefined, {
+                temperature,
+                summary
+            })
         }
     })
 }
